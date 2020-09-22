@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Progress Tracker</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class='page-box'>
+        <header class='page-header'>
+            <h1>My Coding Skill Tracker</h1>
+            <div id="header-button-box">
+                <button id="login-button" class="header-btn">Login</button>
+                <button id="inventory-button" class="header-btn">Inventory 500G</button>
+                <button id="shop-button" class="header-btn">Shop</button>
+            </div>
+        </header>
+
+        <div id="shop" class="shop hidden">
+            <h3>Shop (til you drop!)</h3>
+            <div id="sweet-money">Balance: <span id="money-amount-shop-display">500</span>G</div>
+            <div id="shop-items-box">
+                <div class="shop-item" id="item1">Seed 1</div>
+                <div class="shop-item" id="item2">Seed 2</div>
+                <div class="shop-item" id="item3">Seed 3</div>
+                <div class="shop-item" id="item4">Seed 4</div>
+                <div class="shop-item" id="item4">Additional flower pot</div>
+            </div>
+        </div>
+
+        <div id="inventory" class="inventory hidden">
+            <h3>Inventory</h3>
+            <div id="sweet-money">Balance: <span id="money-amount-purse">500</span>G</div>
+            <div id="inventory-items-box">
+                <div class="inventory-item" id="item1">Slot 1</div>
+                <div class="inventory-item" id="item2">Slot 2</div>
+                <div class="inventory-item" id="item3">Slot 3</div>
+                <div class="inventory-item" id="item4">Slot 4</div>
+                <div class="inventory-item" id="item4">Slot 5</div>
+            </div>
+        </div>
+
+        <div class='windowsill garden-box'>
+            <h3>Plant knowledge seeds for your future!</h3>
+            
+            <div id="windowsill-background">
+
+                <div id="windowsill-allPlants-box">
+                    <div class="plant-box empty" id="plant-1" >
+                        <img class="pot" src="img/plant-pot-2.png">
+                        <img class="flower stage-1" src="img/plant-yellow-stage1.png">
+                    </div>
+                    <div class="plant-box empty" id="plant-2" >
+                        <img class="pot" src="img/plant-pot-2.png">
+                    </div>
+                    <div class="plant-box empty" id="plant-3" >
+                        <img class="pot" src="img/plant-pot-2.png">
+                        <img class="flower stage-3" src="img/plant-yellow-stage3.png">
+                    </div>
+                    <div class="plant-box empty" id="plant-4" >
+                        <img class="pot" src="img/plant-pot-2.png">
+                    </div>
+                    <div class="plant-box empty" id="plant-5" >
+                        <img class="pot" src="img/plant-pot-2.png">
+                        <img class="flower stage-2" src="img/plant-yellow-stage2.png">
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+
+        <div class='box-progress-list-background'>
+            <div class='box-inner-list'>
+                <h3>Skills & Progress - receive a new rare seed for every skill you master!</h3>
+                
+                <div id="Progress_Status"> 
+                    <div id="myprogressBar"></div> 
+                </div> 
+                
+                <div id='new-tasks-input'>
+                    <div id='add-skill-box-title'>Add new skill to learn:</div>
+                    <input type='text' id="skill-group-input" value="Skill group">
+                    <input type='text' id="skill-name-input" value="Skill name">
+                    <button id="confirm-new-skill-input">Confirm</button>
+                </div>
+                
+                <div id='task-list'>
+                    <ul class="skillset-list hidden">
+                        <h4>Example Skillset: CSS Skills</h4>
+                        <li>
+                            <div class="skill-box" id="example-skillbox">
+                                <input type="checkbox">
+                                <div class="skillname">Example Skill Name: Animations</div>
+                            </div>
+                        </li>  
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class='tree-outlook garden-box'>
+            <h3>Skill Tree - for every mastered skill, a fruit will grow!</h3>
+            <div id="tree-box">
+                <img id="tree" src="img/test-tree-drawing.png">
+            </div>
+        </div>
+
+    </div>
+  </body>
+</html>
