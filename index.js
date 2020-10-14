@@ -81,6 +81,16 @@ window.onload = () => {
         }
     }
 
+    class Violet extends Flower {
+        constructor() {
+            super();
+            this.name = "violet";
+            this.stage1ImgSrc = 
+            this.stage2ImgSrc =
+            this.stage3ImgSrc =
+        }
+    }
+
 
 
 
@@ -255,30 +265,30 @@ window.onload = () => {
     let cssTest3 = addSkill("CSS Skills", "Animations & Transitions");
     let cssTest4 = addSkill("CSS Skills", "@mediaqueries");
     
-    let generalTest1 = addSkill("General skills", "Data Structures");
-    let generalTest2 = addSkill("General skills", "Working with Node.js");
-    let generalTest3 = addSkill("General skills", "Working with GitHub");
-    let generalTest4 = addSkill("General skills", "Using Webpack");
-    let generalTest5 = addSkill("General skills", "Bootstrap");
-    let generalTest6 = addSkill("General skills", "CI/CD & Framework Architecture");
-    let generalTest7 = addSkill("General skills", "Product Management for Engineers");
+    let generalTest1 = addSkill("General Skills", "Data Structures");
+    let generalTest2 = addSkill("General Skills", "Working with Node.js");
+    let generalTest3 = addSkill("General Skills", "Working with GitHub");
+    let generalTest4 = addSkill("General Skills", "Using Webpack");
+    let generalTest5 = addSkill("General Skills", "Bootstrap");
+    let generalTest6 = addSkill("General Skills", "CI/CD & Framework Architecture");
+    let generalTest7 = addSkill("General Skills", "Product Management for Engineers");
 
-    let backendTest1 = addSkill("Backend skills", "Express");
-    let backendTest2 = addSkill("Backend skills", "REST APIs");
-    let backendTest3 = addSkill("Backend skills", "GraphQL");
-    let backendTest4 = addSkill("Backend skills", "SQL Databases & Schema Creation");
+    let backendTest1 = addSkill("Backend Skills", "Express");
+    let backendTest2 = addSkill("Backend Skills", "REST APIs");
+    let backendTest3 = addSkill("Backend Skills", "GraphQL");
+    let backendTest4 = addSkill("Backend Skills", "SQL Databases & Schema Creation");
   
     let languagesTest1 = addSkill("Other Languages", "Python basics");
     let languagesTest2 = addSkill("Other Languages", "Kotlin basics");
     let languagesTest3 = addSkill("Other Languages", "Java basics");
     let languagesTest4 = addSkill("Other Languages", "PHP basics");
 
-    let interviewskillsTest1 = addSkill("Job search skills", "Basic algorithm questions");
-    let interviewskillsTest2 = addSkill("Job search skills", "Updated resume");
-    let interviewskillsTest3 = addSkill("Job search skills", "Portfolio polishing");
-    let interviewskillsTest4 = addSkill("Job search skills", "Job research & application");
-    let interviewskillsTest5 = addSkill("Job search skills", "Interview preparation");
-    let interviewskillsTest6 = addSkill("Job search skills", "Professional self-introduction");
+    let interviewskillsTest1 = addSkill("Job search Skills", "Basic algorithm questions");
+    let interviewskillsTest2 = addSkill("Job search Skills", "Updated resume");
+    let interviewskillsTest3 = addSkill("Job search Skills", "Portfolio polishing");
+    let interviewskillsTest4 = addSkill("Job search Skills", "Job research & application");
+    let interviewskillsTest5 = addSkill("Job search Skills", "Interview preparation");
+    let interviewskillsTest6 = addSkill("Job search Skills", "Professional self-introduction");
     
     
     // TESTING for flowers!!!!!
