@@ -85,9 +85,19 @@ window.onload = () => {
         constructor() {
             super();
             this.name = "violet";
-            this.stage1ImgSrc = 
-            this.stage2ImgSrc =
-            this.stage3ImgSrc =
+            this.stage1ImgSrc = "img\violet-stage1.png"
+            this.stage2ImgSrc = "img\violet-stage2.png"
+            this.stage3ImgSrc = "img\violet-stage3.png"
+        }
+    }
+
+    class Daisy extends Flower {
+        constructor() {
+            super();
+            this.name = "daisy";
+            this.stage1ImgSrc = "img\daisy-stage1.png"
+            this.stage2ImgSrc = "img\daisy-stage2.png"
+            this.stage3ImgSrc = "img\daisy-stage3.png"
         }
     }
 
