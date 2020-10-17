@@ -1,6 +1,6 @@
 # skill-tracker
 
-![Skill Tracker Garden](/images/logo.png)
+![Skill Tracker Garden](/img/test-tree-drawing.png)
 
 :butterfly:For now, my skill tracker has:
 
