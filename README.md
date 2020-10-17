@@ -1,5 +1,7 @@
 # skill-tracker
 
+![Skill Tracker Garden](/images/logo.png)
+
 :butterfly:For now, my skill tracker has:
 
 1. A basic shop structure that appears when you click the shop button;
