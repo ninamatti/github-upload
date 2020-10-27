@@ -5,7 +5,8 @@ window.onload = () => {
     // BASIC VARIABLES
     const skillSets = [];
     const skills = [];
-    const typesOfFlowers = ["sunflower"];
+    const skillsLearned = [];
+    const typesOfFlowers = ["sunflower", "violet", "daisy"];
 
     const inventory = {
         purse: 150,
@@ -14,7 +15,7 @@ window.onload = () => {
     };
 
     const shop = {
-        itemsAvailable: [],
+        stock: ["sunflower", "daisy", "violet"]
     };
 
     // CLASSES
@@ -49,6 +50,12 @@ window.onload = () => {
             // add this.sellValue to inventory.purse
         }
 
+        buy() {
+            // add flower to inventory
+
+            // reduce amount of money in purse
+        }
+
         plantIn(parentId, flowerName) {
             let flower = this.createFlowerEl();
             this.flowerDiv = flower;
@@ -78,6 +85,8 @@ window.onload = () => {
             this.stage1ImgSrc = "img/plant-yellow-stage1.png";
             this.stage2ImgSrc = "img/plant-yellow-stage2.png";
             this.stage3ImgSrc = "img/plant-yellow-stage3.png";
+            this.buyValue = 20;
+            this.sellValue =  50;
         }
     }
 
@@ -88,6 +97,8 @@ window.onload = () => {
             this.stage1ImgSrc = "img\violet-stage1.png"
             this.stage2ImgSrc = "img\violet-stage2.png"
             this.stage3ImgSrc = "img\violet-stage3.png"
+            this.buyValue = 50;
+            this.sellValue =  150;
         }
     }
 
@@ -98,6 +109,8 @@ window.onload = () => {
             this.stage1ImgSrc = "img\daisy-stage1.png"
             this.stage2ImgSrc = "img\daisy-stage2.png"
             this.stage3ImgSrc = "img\daisy-stage3.png"
+            this.buyValue = 30;
+            this.sellValue =  70;
         }
     }
 
@@ -106,6 +119,14 @@ window.onload = () => {
 
     // fLOWERS, SEEDS ETC => TBD
     
+    // BUY: buying flower seeds when shop is open
+    // event listener:
+
+
+
+    // SELL: selling stage 3 flowers by clicking on them
+    // event listener:
+
 
 
     // TOGGLING WHETHER AN ELEMENT IS HIDDEN OR NOT
@@ -170,6 +191,10 @@ window.onload = () => {
         //create checkbox
         let checkbox = document.createElement("input");
         checkbox.setAttribute("type", "checkbox");
+        checkbox.setAttribute("class", "unchecked");
+        checkbox.onclick = function() {
+            skillWasLearned(checkbox, nameOfSkillOne);
+        };
 
         //create outer div for skill
         let skillBox = document.createElement("div");
@@ -221,6 +246,11 @@ window.onload = () => {
             //create checkbox
             let checkbox = document.createElement("input");
             checkbox.setAttribute("type", "checkbox");
+            checkbox.setAttribute("class", "unchecked");
+            console.log("the following checkbox was created: ", checkbox);
+            checkbox.onclick = function() {
+                skillWasLearned(checkbox, skillName);
+            };
 
             //append all elements
             skillset.appendChild(skillBox);
@@ -248,6 +278,54 @@ window.onload = () => {
 
         addSkill(skillSetName, skillName);
     });
+
+    // click event for checkbox: 
+    function skillWasLearned(checkboxEl, skillName) {
+        console.log("checkbox checked and onclick activated! class: ", checkboxEl.getAttribute("class"));
+        let progressBar = document.getElementById("myprogressBar");
+            
+        // 1. if clicked for the first time:
+        if(checkboxEl.getAttribute("class") === "unchecked") {
+            // if checked for the first time, add "learned" and "checked" class to checkbox element
+            checkboxEl.setAttribute("class", "learned checked");
+            // add skill to skills learned
+            skillsLearned.push(skillName);
+            // reward: create flower seed in user inventory!
+            // TODO: flower seed element
+            // update progress bar
+            let progress = skillsLearned.length/skills.length;
+            let progressPercentage = (progress*100).toString() + "%";
+            progressBar.style.setProperty("width", progressPercentage); 
+            console.log('progressbar updated to : ', progressPercentage);
+            
+            
+        // 2. if clicked when skill is already learned once and checkbox checked: 
+        // remove skill from progressbar, uncheck and return
+        } else if(checkboxEl.getAttribute("class") === "learned checked") {
+            console.log('was unchecked!!!!!');
+            let index = skillsLearned.indexOf(skillName);
+            console.log('index: ', index, 'skill name: ', skillName, 'at index: ', skillsLearned[index]);
+            skillsLearned.splice(index, 1);
+            let progress = skillsLearned.length/skills.length;
+            let progressPercentage = (progress*100).toString() + "%";
+            progressBar.style.setProperty("width", progressPercentage);
+            checkboxEl.setAttribute("class", "learned unchecked"); 
+            console.log("skill unchecked! and removed from skilllist");
+            return;
+        // 3. if clicked when skill is already learned once and checkbox unchecked: 
+        // add skill to progressbar, check and return
+        } else if(checkboxEl.getAttribute("class") === "learned unchecked") {
+            skillsLearned.push(skillName);
+            let progress = skillsLearned.length/skills.length;
+            let progressPercentage = (progress*100).toString() + "%";
+            progressBar.style.setProperty("width", progressPercentage); 
+            checkboxEl.setAttribute("class", "learned checked");
+            return;
+        } else {
+            console.log('Something is wrong here...');
+        }
+        
+    };
         
         
     // Example setup for code chrysalis precourse and bootcamp skills:
@@ -300,6 +378,8 @@ window.onload = () => {
     let interviewskillsTest5 = addSkill("Job search Skills", "Interview preparation");
     let interviewskillsTest6 = addSkill("Job search Skills", "Professional self-introduction");
     
+    // TESTING for skills!!!!!
+    console.log("Skillsets updated: ", skillSets, "Skills updated: ", skills);
     
     // TESTING for flowers!!!!!
     let sunflower = new Sunflower();
