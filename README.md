@@ -6,9 +6,9 @@
 
 1. A basic shop structure that appears when you click the shop button;
 2. A basic inventory structure that appears when you click the inventory button;
-3. A windowsill element that contains 5 boxes with flower pots & flowers at different stages (here, the user will be able to plant flowers). For now, I only drew two basic flowers with 3 different stages and have installed them randomly in the pots.
+3. A windowsill element that contains 5 boxes with flower pots & flowers at different stages (here, the user will be able to plant flowers). For now, I only drew three basic flowers with 3 different stages and have installed one of them at random growth stages in the pots.
 4. A List with skill sets and according skills (for now, the default is set up as code chrysalis precourse and bootcamp skills for the most part) as well as a possibility to add new skill sets or a new skill to an existing skill set using the input new skill area.
-5. A progress bar within the skill list (green) that will fill up when more skills are checked (doesn't work yet) - will be linked to how many percent of all total skills are learned.
+5. A progress bar within the skill list (green) that will fill up when more skill boxes are checked and will empty when skills are unchecked again - linked to how many percent of all total skills are learned.
 6. A 'skill tree', which will be populated with fruit blossoms or fruit, one blossom for each new skill so that it's easily visible how many skills have already been learned. The tree picture is a stand-in, I will draw my own at one point. The fruit blossom system isn't created yet.
 
 :sunny:Features I want to add:
