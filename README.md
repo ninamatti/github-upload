@@ -1,5 +1,9 @@
 # skill-tracker
 
+## About this project ##
+Skill tracker page built with Vanilla JavaScript and CSS with the goal in mind to make it easy and rewarding for the user to define a set of new skills they want to learn, easily track their progress and be motivated by a reward system.
+
+
 ![Skill Tracker Garden](/img/image.png)
 
 :butterfly:For now, my skill tracker has:
